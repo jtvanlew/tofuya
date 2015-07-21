@@ -16,7 +16,7 @@ Item.create([
   },
   {
   name: "Green Salad",
-  price: "8.99",
+  price: "2.99",
   tag: "salad"
   },
   {
@@ -35,12 +35,14 @@ Item.create([
   name: "Pork Bulgogi",
   description: "B.B.Q. slices of pork marinated in house spicy sauce",
   price: "14.99",
+  spicy: true,
   tag: "bbq"
   },
   {
   name: "Chicken Bulgogi",
   description: "B.B.Q. slices of chicken marinated in house spicy sauce",
   price: "14.99",
+  spicy: true,
   tag: "bbq"
   },
   {
@@ -143,12 +145,14 @@ Item.create([
   name: "Pork Bulgogi & Sundubu",
   description: "Thin slices of pork marinated in spicy sauce + soft tofu stew",
   price: "15.99",
+  spicy: true,
   tag: "combo"
   },
   {
   name: "Chicken Bulgogi & Sundubu",
   description: "Thin slices of chicken marinated in spicy sauce + soft tofu stew",
   price: "15.99",
+  spicy: true,
   tag: "combo"
   },
   {
