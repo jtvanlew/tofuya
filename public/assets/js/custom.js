@@ -491,7 +491,7 @@
 			map.addMarker({
 				position: mapLocation,
 				icon: image,
-				title: 'Rival',
+				title: 'Tofu Ya',
 				infoWindow: {
 					content: '<p><strong>Tofu Ya</strong><br/>2021 Sawtelle Blvd<br/>P: (310) 473-2627<br/>Los Angeles</p>'
 				}
