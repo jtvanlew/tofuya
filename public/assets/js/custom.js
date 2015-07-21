@@ -463,7 +463,7 @@
 		 * Google Map
 		/* ---------------------------------------------- */
 
-		var mapLocation = new google.maps.LatLng(34.031428,-118.2071542,17);
+		var mapLocation = new google.maps.LatLng(34.0402582,-118.4433332,15);
 
 		var $mapis = $('#map');
 
@@ -493,7 +493,7 @@
 				icon: image,
 				title: 'Rival',
 				infoWindow: {
-					content: '<p><strong>Rival</strong><br/>121 Somewhere Ave, Suite 123<br/>P: (123) 456-7890<br/>Australia</p>'
+					content: '<p><strong>Tofu Ya</strong><br/>2021 Sawtelle Blvd<br/>P: (310) 473-2627<br/>Los Angeles</p>'
 				}
 			});
 
