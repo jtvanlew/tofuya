@@ -6,5 +6,6 @@ class Category
 
   field :name,             type: String
   field :description,	   type: String
+  field :img,             type: String
 
 end
