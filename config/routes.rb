@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#index'
   get 'menu' => 'pages#menu'
-  get 'index' => 'pages#index'
+  get 'index', :to => redirect('/')
   post 'sign_up' => 'pages#sign_up'
 
   # Example of regular route:
