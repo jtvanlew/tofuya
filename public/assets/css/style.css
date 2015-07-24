@@ -238,23 +238,23 @@ a,
 }
 
 .btn.btn-d {
-	background: rgba(17, 17, 17, .8);
+	background: rgba(173, 173, 173, .8);
 	color: #fff;
 }
 
 .btn.btn-d:hover,
 .btn.btn-d:focus {
-	background: rgba(17, 17, 17, 1);
+	background: rgba(83, 83, 83, 1);
 }
 
 .btn.btn-b {
-	background: rgba(17, 17, 17, 1);
+	background: rgba(83, 83, 83, 1);
 	color: #fff;
 }
 
 .btn.btn-b:hover,
 .btn.btn-b:focus {
-	background: rgba(17, 17, 17, .8);
+	background: rgba(83, 83, 83, 1);
 }
 
 .btn-border-d {
@@ -1758,10 +1758,12 @@ Widgets
 .sidebar .widget-title {
 	color: #111;
 }
-
+.widget p{
+	font-size: 18px;
+}
 .widget .widget-title {
 	border-bottom: 1px dotted #c2c2c2;
-	font-size: 14px;
+	font-size: 30px;
 	padding: 0 0 10px;
 	margin: 0 0 15px;
 }

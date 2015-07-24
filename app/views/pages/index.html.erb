@@ -46,7 +46,14 @@
 
 					<li><a href="#totop">Home</a></li>
 					<li><a href="#about" class="section-scroll">About tofu</a></li>
-					<li><a href="#menu" class="section-scroll">Menu</a></li>
+					<li class="dropdown">
+						<a href="#menu" class="dropdown-toggle section-scroll" data-toggle="dropdown">Menu</a>
+						<ul class="dropdown-menu">
+							<% @categories.each do |category| %>
+							<li><a href="#<%= category.name.parameterize %>" class="section-scroll"><%= category.name %></a></li>
+							<% end %>
+						</ul>
+					</li>
 					<li><a href="#contact" class="section-scroll">Contact</a></li>
 					<li><a href="#map-section" class="section-scroll">Find us</a></li>
 
@@ -59,7 +66,7 @@
 	<!-- Navigation end -->
 
 	<!-- Home start -->
-	<section id="home" class="home-section home-parallax home-fade home-full-height bg-dark-30" data-background="<%= image_url('tofuya.jpg') %>">
+	<section id="home" class="home-section home-parallax home-fade home-full-height bg-dark-30" data-background="assets/images/section-15.jpg">
 
 		<div class="hs-caption">
 			<div class="caption-content">
@@ -133,7 +140,7 @@
 		</section>
 		<!-- Video end -->
 
-		<!-- Menu start -->
+		<!-- Popular menu start -->
 		<section id="menu" class="module">
 			<div class="container">
 
@@ -143,7 +150,7 @@
 					<div class="col-sm-2 col-sm-offset-5">
 						<div class="alt-module-subtitle">
 							<span class="holder-w"></span>
-							<h5 class="font-serif">Most popular menu</h5>
+							<h5 class="font-serif">Most popular orders</h5>
 							<span class="holder-w"></span>
 						</div>
 					</div>
@@ -246,29 +253,96 @@
 					<!-- Restaurant menu right col end -->
 
 				</div><!-- .row -->
+			</div>
+		</section>
+		<!-- popular menu end -->
+
+
+		<!-- Menu header start -->
+		<% @categories.each do |category| %>
+		<section id="<%= category.name.parameterize %>" class="module bg-dark bg-dark-10" data-background="<%= image_url(category.img)%>">
+			<div class="container">
+
+
 				<div class="row">
-
-					<div class="col-sm-4 col-sm-offset-4 align-center mt-70">
-
-						<!-- Divider -->
-						<hr class="divider-w pt-20">
-						<!-- Divider -->
-
-						<a href="menu" class="font-alt mt-50"><h3>See our full menu</h3></a>
-
+					<div class="col-sm-8 col-sm-offset-2">
+						<h2 class="module-title font-alt mb-0"><b><%= category.name%></b></h2>
 					</div>
-
+				</div>
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-5 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+						<div class="alt-module-subtitle">
+							<% if !category.description.blank? %>
+							<span class="holder-w"></span>
+							<h5 class="font-serif"><%= category.description%></h5>
+							<span class="holder-w"></span>
+							<%end%>
+						</div>
+					</div>
 				</div><!-- .row -->
 			</div>
 		</section>
+		<!-- Menu header end -->
+
+		<!-- Menu start -->
+		<section class="module">
+			<div class="container">
+				<div class="row multi-columns-row">
+					<!-- Restaurant menu left col start -->
+					<div class="col-sm-6">
+						<% category.items.each_with_index do |item, index| %>
+						<% if index % 2 == 0 %>
+						<div class="menu">
+
+
+							<div class="row">
+								<div class="col-sm-8">
+									<h4 class="menu-title font-alt"><%= item.name %></h4>
+									<div class="menu-detail font-serif"><%= item.description %></div>
+								</div>
+								<div class="col-sm-4 menu-price-detail">
+									<h4 class="menu-price font-alt">$<%= item.price %></h4>
+								</div>
+							</div>
+
+
+						</div>
+						<% end %>
+						<% end %>
+
+					</div>
+					<!-- Restaurant menu left col end -->
+					<!-- Restaurant menu right col start -->
+					<div class="col-sm-6">
+						<% category.items.each_with_index do |item, index| %>
+						<% if index % 2 == 1 %>
+						<div class="menu">
+
+
+							<div class="row">
+								<div class="col-sm-8">
+									<h4 class="menu-title font-alt"><%= item.name %></h4>
+									<div class="menu-detail font-serif"><%= item.description %></div>
+								</div>
+								<div class="col-sm-4 menu-price-detail">
+									<h4 class="menu-price font-alt">$<%= item.price %></h4>
+								</div>
+							</div>
+
+						</div>
+						<% end %>
+						<% end %>
+
+					</div>
+					<!-- Restaurant menu right col end -->
+				</div><!-- .row -->
+			</div>
+		</section>
+		<% end %>
 		<!-- Menu end -->
 
-		<!-- Divider -->
-		<hr class="divider-w">
-		<!-- Divider -->
-
 		<!-- Contact start -->
-		<section id="contact" class="module">
+		<section id="contact" class="module bg-dark">
 			<div class="container">
 
 				<!-- Module header start -->
@@ -332,31 +406,28 @@
 			</div>
 		</section>
 		<!-- Contact end -->
+		<section id="map-section">
+			<div id="map"></div>
+		</section>
 		<div class="module-small bg-dark">
 			<div class="container">
 
 				<div class="row">
-
-					<div class="col-sm-3">
-
-						<div class="widget">
-							<h5 class="widget-title font-alt">Our hours</h5>
-							<!-- <span class="icon-clock"></span> -->
-							Sun - Th: 11:30 AM - 9:30 PM<br>
-							Fri, Sat: 11:30 AM - 10:30 PM<br>
-						</div>
-						<p></p>
+					<div class="col-sm-4">
 						<div class="widget">
 							<h5 class="widget-title font-alt">Call for pick up</h5>
 							<p>Phone: 310 473 2627</p>
 						</div>
 					</div>
-					<div class="col-sm-6">
-						<section id="map-section">
-							<div id="map"></div>
-						</section>
+					<div class="col-sm-4">
+						<div class="widget">
+							<h5 class="widget-title font-alt">Our hours</h5>
+							<!-- <span class="icon-clock"></span> -->
+							<p>Sun - Th: 11:30 AM - 9:30 PM<br>
+							Fri, Sat: 11:30 AM - 10:30 PM<br></p>
+						</div>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-4">
 						<div class="widget">
 							<h5 class="widget-title font-alt">Where to find us</h5>
 							<p>Tofu Ya<br>
@@ -382,8 +453,6 @@
 						<div class="footer-social-links">
 							<a href="http://www.yelp.com/biz/tofu-ya-los-angeles"><i class="fa fa-yelp"></i></a>
 							<a href="https://foursquare.com/v/tofuya/49e213adf964a520f0611fe3"><i class="fa fa-foursquare"></i></a>
-
-
 						</div>
 					</div>
 
