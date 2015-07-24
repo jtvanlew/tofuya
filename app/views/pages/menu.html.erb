@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	
+
 	<title>Rival - Multipurpose Template</title>
-	
+
 	<!-- CSS -->
 	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/simpletextrotator.css" rel="stylesheet">
@@ -38,13 +38,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">Tofu Ya</a>
+				<a class="navbar-brand" href="index">Tofu Ya</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="custom-collapse">
 				<ul class="nav navbar-nav navbar-right">
 
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index">Home</a></li>
 					<li class="dropdown">
 						<a href="#totop" class="dropdown-toggle" data-toggle="dropdown">Full menu</a>
 						<ul class="dropdown-menu">
@@ -67,13 +67,13 @@
 	<div class="main">
 		<!-- Menu header start -->
 		<% @categories.each do |category| %>
-		<section id="<%= category.name.parameterize %>" class="module bg-dark bg-dark-10" data-background="assets/images/section-16.jpg">
+		<section id="<%= category.name.parameterize %>" class="module bg-dark bg-dark-10" data-background="<%= image_url(category.img)%>">
 			<div class="container">
 
 
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2">
-						<h2 class="module-title font-alt mb-0"><%= category.name%></h2>
+						<h2 class="module-title font-alt mb-0"><b><%= category.name%></b></h2>
 					</div>
 				</div>
 				<div class="row">
@@ -95,10 +95,19 @@
 		<section class="module">
 			<div class="container">
 				<div class="row multi-columns-row">
+<<<<<<< HEAD
 					<% category.items.each_with_index do |item, index| %>
+=======
+
+
+>>>>>>> 5adfc2f1a60591865609fcf0d0b9208369da6eda
 					<!-- Restaurant menu left col start -->
 					<div class="col-sm-6">
+						<% category.items.each_with_index do |item, index| %>
+						<% if index % 2 == 0 %>
 						<div class="menu">
+
+
 							<div class="row">
 								<div class="col-sm-8">
 									<h4 class="menu-title font-alt"><%= item.name %></h4>
@@ -108,10 +117,44 @@
 									<h4 class="menu-price font-alt">$<%= item.price %></h4>
 								</div>
 							</div>
+
+
 						</div>
+						<% end %>
+						<% end %>
+
 					</div>
 					<!-- Restaurant menu left col end -->
+<<<<<<< HEAD
 					<% end %>
+=======
+
+					<!-- Restaurant menu right col start -->
+					<div class="col-sm-6">
+						<% category.items.each_with_index do |item, index| %>
+						<% if index % 2 == 1 %>
+						<div class="menu">
+
+
+							<div class="row">
+								<div class="col-sm-8">
+									<h4 class="menu-title font-alt"><%= item.name %></h4>
+									<div class="menu-detail font-serif"><%= item.description %></div>
+								</div>
+								<div class="col-sm-4 menu-price-detail">
+									<h4 class="menu-price font-alt">$<%= item.price %></h4>
+								</div>
+							</div>
+
+						</div>
+						<% end %>
+						<% end %>
+
+					</div>
+					<!-- Restaurant menu right col end -->
+
+
+>>>>>>> 5adfc2f1a60591865609fcf0d0b9208369da6eda
 				</div><!-- .row -->
 			</div>
 		</section>
@@ -223,34 +266,34 @@
 		<!-- Footer start -->
 		<footer class="footer bg-dark">
 			<div class="container">
-	
+
 				<div class="row">
-	
+
 					<div class="col-sm-6">
-						<p class="copyright font-alt">© 2015 <a href="index.html">Rival</a>, All Rights Reserved.</p>
+						<p class="copyright font-alt">© 2015 <a href="index">Rival</a>, All Rights Reserved.</p>
 					</div>
-	
+
 					<div class="col-sm-6">
 						<div class="footer-social-links">
 							<a href="http://www.yelp.com/biz/tofu-ya-los-angeles"><i class="fa fa-yelp"></i></a>
 							<a href="https://foursquare.com/v/tofuya/49e213adf964a520f0611fe3"><i class="fa fa-foursquare"></i></a>
 						</div>
 					</div>
-	
+
 				</div><!-- .row -->
-	
+
 			</div>
 		</footer>
 		<!-- Footer end -->
-	
+
 	</div>
 	<!-- Wrapper start -->
-	
+
 	<!-- Scroll-up -->
 	<div class="scroll-up">
 		<a href="#totop"><i class="fa fa-angle-double-up"></i></a>
 	</div>
-	
+
 	<!-- Javascript files -->
 	<script src="assets/js/jquery-2.1.3.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>

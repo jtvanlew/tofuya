@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'menu' => 'pages#menu'
   get 'index', :to => redirect('/')
+  # get 'menu', :to => redirect('/')
   post 'sign_up' => 'pages#sign_up'
 
   # Example of regular route:

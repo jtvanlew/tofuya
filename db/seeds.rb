@@ -1,22 +1,22 @@
 Category.destroy_all
 Item.destroy_all
 
-salad = Category.create({name: "Salad", 
+salad = Category.create({name: "Salad",
                       description: "",
                       img: "salad.jpg"})
-bbq = Category.create({name: "B.B.Q. Menu", 
+bbq = Category.create({name: "B.B.Q. Menu",
                       description: "",
-                      img: "bbq.jpg"})
-tofu = Category.create({name: "Soft Tofu Stew", 
+                      img: "bulgogi.jpg"})
+tofu = Category.create({name: "Soft Tofu Stew",
                       description: "Served with steamed rice and assorted side dishes",
                       img: "soondobu.jpg"})
-tofu_combo = Category.create({name: "Soft Tofu Combo Plates", 
+tofu_combo = Category.create({name: "Soft Tofu Combo Plates",
                       description: "Served with rice, any choice of soft tofu stew",
                       img: "combo.jpg"})
-special = Category.create({name: "Specials", 
+special = Category.create({name: "Specials",
                       description: "",
                       img: "specials.jpg"})
-box = Category.create({name: "Lunch Box", 
+box = Category.create({name: "Lunch Box",
                       description: "Mon - Fri, 11:30am - 2:30pm",
                       img: "lunchbox.jpg"})
 Item.create([
