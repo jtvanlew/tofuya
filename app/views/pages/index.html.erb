@@ -80,13 +80,13 @@
 	<div class="main">
 
 		<!-- Video start -->
-		<section id="about" class="module module-video bg-dark-30" data-background="assets/images/section-12.jpg">
+		<section id="about" class="module module-video bg-dark-30" data-background="<%= image_url('section-12.jpg') %>">
 
 			<div class="container">
 
 				<div class="row">
 
-					<div class="col-sm-12">
+					<div class="col-sm-12 pull-right">
 						<h2 class="module-title font-alt align-left">Soybean & Tofu</h2>
 					</div>
 
@@ -94,21 +94,22 @@
 
 				<div class="row">
 
-					<div class="col-sm-3">
+					<div class="col-sm-3 pull-right">
 						<p class="font-serif">The soybean is often referred to as the perfect source of vegetable protein. It has a unique formation that provides an excellent balance of nutrients. Soybeans are the only members of the vegetable family that have more protein than meat products -- and it's healthier too!</p>
 						<!-- <p class="font-serif">The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.</p> -->
-					</div>
+						<p class="font-serif">Tofu is made from soybeans. It is high in protein and calcium, low in saturated fat and salt, and completely cholesterol-free.
+						</p>
+<!--
+					<div class="col-sm-3 pull-right">
 
-					<div class="col-sm-3">
-						<p class="font-serif">Tofu is made from soybeans. It is high in protein and calcium, low in saturated fat and salt, and completely cholesterol-free. Recent research has shown:
 						<ul>
 							<li>Tofu reduces the risk of cancer</li>
 							<li>Tofu protects & strengthens the heart</li>
 							<li>Tofu preserves bone mass</li>
 							<li>Tofu is rich in iron and isoflavones/phytoestrogen, two of the main nutrients that are necessary for a healthy human body</li>
 							<li>Tofu reduces menopause symptoms such as hot flashes, sweating, etc.</li>
-						</ul></p>
-					</div>
+						</ul>
+					</div> -->
 
 				</div><!-- .row -->
 
@@ -279,7 +280,7 @@
 				<!-- Module header start -->
 				<div class="row">
 
-					<div class="col-sm-2 col-sm-offset-5">
+					<div class="col-sm-8 col-sm-offset-2">
 						<div class="alt-module-subtitle">
 							<span class="holder-w"></span>
 							<h5 class="font-serif">Get in touch</h5>
@@ -291,7 +292,7 @@
 
 				<div class="row">
 
-					<div class="col-sm-8 col-sm-offset-2">
+					<div class="col-sm-12">
 						<h2 class="module-title font-alt">Contact us</h2>
 					</div>
 
@@ -300,7 +301,7 @@
 
 				<div class="row">
 
-					<div class="col-sm-8">
+					<div class="col-sm-8 col-sm-offset-2">
 
 						<form id="contact-form" role="form" novalidate="">
 
@@ -332,41 +333,6 @@
 
 					</div>
 
-					<div class="col-sm-4">
-
-						<!-- Alt features item start -->
-						<div class="alt-features-item mt-0 mt-xs-60">
-							<div class="alt-features-icon">
-								<span class="icon-phone"></span>
-							</div>
-							<h3 class="alt-features-title font-alt">Call for pick-up</h3>
-							Phone: 310 473 2627
-						</div>
-						<!-- Alt features item end -->
-
-						<!-- Alt features item start -->
-						<div class="alt-features-item">
-							<div class="alt-features-icon">
-								<span class="icon-map"></span>
-							</div>
-							<h3 class="alt-features-title font-alt">Where to find us</h3>
-							Tofu Ya<br>
-							2021 Sawtelle Blvd<br>
-							Los Angeles, CA 90025
-						</div>
-						<!-- Alt features item end -->
-
-						<!-- Alt features item start -->
-						<div class="alt-features-item">
-							<div class="alt-features-icon">
-								<span class="icon-clock"></span>
-							</div>
-							<h3 class="alt-features-title font-alt">Our hours</h3>
-							Sun - Th: 11:30 AM - 9:30 PM<br>
-							Fri, Sat: 11:30 AM - 10:30 PM<br>
-						</div>
-						<!-- Alt features item end -->
-					</div>
 
 				</div><!-- .row -->
 
@@ -487,6 +453,9 @@
 					<div class="col-sm-6">
 						<div class="footer-social-links">
 							<a href="http://www.yelp.com/biz/tofu-ya-los-angeles"><i class="fa fa-yelp"></i></a>
+							<a href="https://foursquare.com/v/tofuya/49e213adf964a520f0611fe3"><i class="fa fa-foursquare"></i></a>
+
+
 						</div>
 					</div>
 
