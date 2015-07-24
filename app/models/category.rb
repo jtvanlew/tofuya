@@ -5,5 +5,6 @@ class Category
   has_many :items
 
   field :name,             type: String
+  field :description,	   type: String
 
 end
