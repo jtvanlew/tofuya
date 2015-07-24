@@ -7,6 +7,6 @@ class Item
   field :price,           type: Float
   field :description,     type: String
   field :tag,             type: String
-  field :spicy,			  type: Boolean
+  field :spicy, 		  type: Boolean
 
 end
