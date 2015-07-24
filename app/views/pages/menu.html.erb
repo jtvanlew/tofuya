@@ -48,9 +48,9 @@
 					<li class="dropdown">
 						<a href="#totop" class="dropdown-toggle" data-toggle="dropdown">Full menu</a>
 						<ul class="dropdown-menu">
-							<li><a href="#salads" class="section-scroll">Soft Tofu Stew</a></li>
-							<li><a href="#BBQ" class="section-scroll">B.B.Q.</a></li>
-							<li><a href="#salads" class="section-scroll">Salads</a></li>
+							<% @categories.each do |category| %>
+							<li><a href="#<%= category.name.parameterize %>" class="section-scroll"><%= category.name %></a></li>
+							<% end %>
 						</ul>
 					</li>
 					<li><a href="#map-section" class="section-scroll">Find us</a></li>
@@ -67,31 +67,27 @@
 	<!-- Wrapper start -->
 	<div class="main">
 		<!-- Menu header start -->
-		<section class="module bg-dark bg-dark-30" data-background="assets/images/section-16.jpg">
+		<% @categories.each do |category| %>
+		<section id="<%= category.name.parameterize %>" class="module bg-dark bg-dark-10" data-background="assets/images/section-16.jpg">
 			<div class="container">
 
-				<!-- Module header start -->
-				<div class="row">
 
-					<div class="col-sm-2 col-sm-offset-5">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<h2 class="module-title font-alt mb-0"><%= category.name%></h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-5 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
 						<div class="alt-module-subtitle">
+							<% if !category.description.blank? %>
 							<span class="holder-w"></span>
-							<h5 class="font-serif">Try our confectionery</h5>
+							<h5 class="font-serif"><%= category.description%></h5>
 							<span class="holder-w"></span>
+							<%end%>
 						</div>
 					</div>
-
 				</div><!-- .row -->
-
-				<div class="row">
-
-					<div class="col-sm-8 col-sm-offset-2">
-						<h2 class="module-title font-alt mb-0">Cakes and pastries</h2>
-					</div>
-
-				</div><!-- .row -->
-				<!-- Module header end -->
-
 			</div>
 		</section>
 		<!-- Menu header end -->
@@ -99,494 +95,48 @@
 		<!-- Menu start -->
 		<section class="module">
 			<div class="container">
-
 				<div class="row multi-columns-row">
-
+					<% category.items.each_with_index do |item, index| %>
+					<% if index < category.items.count/2 %>
 					<!-- Restaurant menu left col start -->
 					<div class="col-sm-6">
-
 						<div class="menu">
 							<div class="row">
 								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Wild Mushroom Bucatini with Kale</h4>
-									<div class="menu-detail font-serif">Mushroom / Veggie / White Sources</div>
+									<h4 class="menu-title font-alt"><%= item.name %></h4>
+									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
 								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$10.5</h4>
+									<h4 class="menu-price font-alt">$<%= item.price %></h4>
 								</div>
 							</div>
 						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Lemon and Garlic Green Beans</h4>
-									<div class="menu-detail font-serif">Lemon / Garlic / Beans</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$14.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">LambBeef Kofka Skewers with Tzatziki</h4>
-									<div class="menu-detail font-serif">Lamb / Wine / Butter</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$18.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Imported Oysters Grill (5 Pieces)</h4>
-									<div class="menu-detail font-serif">Oysters / Veggie / Ginger</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$15.9</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Meatloaf with Black Pepper-Honey BBQ</h4>
-									<div class="menu-detail font-serif">Pepper / Chicken / Honey</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$16.4</h4>
-								</div>
-							</div>
-						</div>
-
 					</div>
 					<!-- Restaurant menu left col end -->
-
+					<% else %>
 					<!-- Restaurant menu right col start -->
 					<div class="col-sm-6">
-
 						<div class="menu">
 							<div class="row">
 								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Wild Mushroom Bucatini with Kale</h4>
-									<div class="menu-detail font-serif">Mushroom / Veggie / White Sources</div>
+									<h4 class="menu-title font-alt"><%= item.name %></h4>
+									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
 								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$10.5</h4>
+									<h4 class="menu-price font-alt">$<%= item.price %></h4>
 								</div>
 							</div>
 						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Lemon and Garlic Green Beans</h4>
-									<div class="menu-detail font-serif">Lemon / Garlic / Beans</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$14.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">LambBeef Kofka Skewers with Tzatziki</h4>
-									<div class="menu-detail font-serif">Lamb / Wine / Butter</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$18.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Imported Oysters Grill (5 Pieces)</h4>
-									<div class="menu-detail font-serif">Oysters / Veggie / Ginger</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$15.9</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Meatloaf with Black Pepper-Honey BBQ</h4>
-									<div class="menu-detail font-serif">Pepper / Chicken / Honey</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$16.4</h4>
-								</div>
-							</div>
-						</div>
-
 					</div>
 					<!-- Restaurant menu right col end -->
-
+					<% end %>
+					<% end %>
 				</div><!-- .row -->
-
 			</div>
 		</section>
 		<!-- Menu end -->
-
-		<!-- Menu header start -->
-		<section id="salads" class="module bg-dark bg-dark-30" data-background="assets/images/section-17.jpg">
-			<div class="container">
-
-				<!-- Module header start -->
-				<div class="row">
-
-					<div class="col-sm-2 col-sm-offset-5">
-						<div class="alt-module-subtitle">
-							<span class="holder-w"></span>
-							<h5 class="font-serif">Very tasty</h5>
-							<span class="holder-w"></span>
-						</div>
-					</div>
-
-				</div><!-- .row -->
-
-				<div class="row">
-
-					<div class="col-sm-8 col-sm-offset-2">
-						<h2 class="module-title font-alt mb-0">Soups and salads</h2>
-					</div>
-
-				</div><!-- .row -->
-				<!-- Module header end -->
-
-			</div>
-		</section>
-		<!-- Menu header end -->
-
-		<!-- Menu start -->
-		<section class="module">
-			<div class="container">
-
-				<div class="row multi-columns-row">
-
-					<!-- Restaurant menu left col start -->
-					<div class="col-sm-6">
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Wild Mushroom Bucatini with Kale</h4>
-									<div class="menu-detail font-serif">Mushroom / Veggie / White Sources</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$10.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Lemon and Garlic Green Beans</h4>
-									<div class="menu-detail font-serif">Lemon / Garlic / Beans</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$14.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">LambBeef Kofka Skewers with Tzatziki</h4>
-									<div class="menu-detail font-serif">Lamb / Wine / Butter</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$18.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Imported Oysters Grill (5 Pieces)</h4>
-									<div class="menu-detail font-serif">Oysters / Veggie / Ginger</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$15.9</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Meatloaf with Black Pepper-Honey BBQ</h4>
-									<div class="menu-detail font-serif">Pepper / Chicken / Honey</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$16.4</h4>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<!-- Restaurant menu left col end -->
-
-					<!-- Restaurant menu right col start -->
-					<div class="col-sm-6">
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Wild Mushroom Bucatini with Kale</h4>
-									<div class="menu-detail font-serif">Mushroom / Veggie / White Sources</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$10.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Lemon and Garlic Green Beans</h4>
-									<div class="menu-detail font-serif">Lemon / Garlic / Beans</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$14.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">LambBeef Kofka Skewers with Tzatziki</h4>
-									<div class="menu-detail font-serif">Lamb / Wine / Butter</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$18.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Imported Oysters Grill (5 Pieces)</h4>
-									<div class="menu-detail font-serif">Oysters / Veggie / Ginger</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$15.9</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Meatloaf with Black Pepper-Honey BBQ</h4>
-									<div class="menu-detail font-serif">Pepper / Chicken / Honey</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$16.4</h4>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<!-- Restaurant menu right col end -->
-
-				</div><!-- .row -->
-
-			</div>
-		</section>
-		<!-- Menu end -->
-
-		<!-- Menu header start -->
-		<section id="BBQ" class="module bg-dark bg-dark-30" data-background="assets/images/section-19.jpg">
-			<div class="container">
-
-				<!-- Module header start -->
-				<div class="row">
-
-					<div class="col-sm-2 col-sm-offset-5">
-						<div class="alt-module-subtitle">
-							<span class="holder-w"></span>
-							<h5 class="font-serif">Best on earth</h5>
-							<span class="holder-w"></span>
-						</div>
-					</div>
-
-				</div><!-- .row -->
-
-				<div class="row">
-
-					<div class="col-sm-8 col-sm-offset-2">
-						<h2 class="module-title font-alt mb-0">Meat and fish dishes</h2>
-					</div>
-
-				</div><!-- .row -->
-				<!-- Module header end -->
-
-			</div>
-		</section>
-		<!-- Menu header end -->
-
-		<!-- Menu start -->
-		<section class="module">
-			<div class="container">
-
-				<div class="row multi-columns-row">
-
-					<!-- Restaurant menu left col start -->
-					<div class="col-sm-6">
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Wild Mushroom Bucatini with Kale</h4>
-									<div class="menu-detail font-serif">Mushroom / Veggie / White Sources</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$10.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Lemon and Garlic Green Beans</h4>
-									<div class="menu-detail font-serif">Lemon / Garlic / Beans</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$14.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">LambBeef Kofka Skewers with Tzatziki</h4>
-									<div class="menu-detail font-serif">Lamb / Wine / Butter</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$18.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Imported Oysters Grill (5 Pieces)</h4>
-									<div class="menu-detail font-serif">Oysters / Veggie / Ginger</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$15.9</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Meatloaf with Black Pepper-Honey BBQ</h4>
-									<div class="menu-detail font-serif">Pepper / Chicken / Honey</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$16.4</h4>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<!-- Restaurant menu left col end -->
-
-					<!-- Restaurant menu right col start -->
-					<div class="col-sm-6">
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Wild Mushroom Bucatini with Kale</h4>
-									<div class="menu-detail font-serif">Mushroom / Veggie / White Sources</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$10.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Lemon and Garlic Green Beans</h4>
-									<div class="menu-detail font-serif">Lemon / Garlic / Beans</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$14.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">LambBeef Kofka Skewers with Tzatziki</h4>
-									<div class="menu-detail font-serif">Lamb / Wine / Butter</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$18.5</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Imported Oysters Grill (5 Pieces)</h4>
-									<div class="menu-detail font-serif">Oysters / Veggie / Ginger</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$15.9</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Meatloaf with Black Pepper-Honey BBQ</h4>
-									<div class="menu-detail font-serif">Pepper / Chicken / Honey</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$16.4</h4>
-								</div>
-							</div>
-						</div>
-
-					</div>
-					<!-- Restaurant menu right col end -->
-
-				</div><!-- .row -->
-
-			</div>
-		</section>
-		<!-- Menu end -->
+		<% end %>
+		
 
 		<!-- Map start -->
 		<section id="map-section">
