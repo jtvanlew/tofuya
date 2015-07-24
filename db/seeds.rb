@@ -1,3 +1,11 @@
+Category.creat([
+  {name: "Salad"},
+  {name: "B.B.Q. Menu"},
+  {name: "Soft Tofu Stew"},
+  {name: "Soft Tofu Combo Plates"},
+  {name: "Specials"},
+  {name: "Lunch Box"}
+  ])
 Item.create([
   {
   name: "B.B.Q. Beef Ribs With Salad",

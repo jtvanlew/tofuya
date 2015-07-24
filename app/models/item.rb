@@ -1,6 +1,7 @@
 class Item
   include Mongoid::Document
   include Mongoid::Timestamps
+  belongs_to :category
 
   field :name,            type: String
   field :price,           type: Float
