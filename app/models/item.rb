@@ -6,7 +6,7 @@ class Item
   field :name,            type: String
   field :price,           type: Float
   field :description,     type: String
-  field :tag,             type: String
-  field :spicy, 		  type: Boolean
+  field :tag,             type: Array
+  field :menu_num, 		  type: Integer
 
 end

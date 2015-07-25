@@ -18,6 +18,8 @@
 	<link href="assets/css/owl.carousel.css" rel="stylesheet">
 	<link href="assets/css/animate.css" rel="stylesheet">
 	<link href="assets/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://static.sasongsmat.nu/fonts/vegetarian.css" />
+
 </head>
 <body>
 
@@ -165,94 +167,74 @@
 
 				</div><!-- .row -->
 				<!-- Module header end -->
-
+				<% @categories.each do |category| %>
 				<div class="row multi-columns-row">
 
 					<!-- Restaurant menu left col start -->
 					<div class="col-sm-6">
-
+						<% category.items.each_with_index do |item, index| %>
+						<% if index % 2 == 0 %>
+						<% item.tag.each do |tag| %>
+						<% if tag == "favorite" %>
 						<div class="menu">
 							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Galbi</h4>
-									<div class="menu-detail font-serif">B.B.Q. beef ribs marinated in house special sauce</div>
+								<div class="col-sm-1">
+									<div class="menu-flare">
+									<p class="fa fa-star-o"></p>
+									</div>
+								</div>
+								<div class="col-sm-1">
+									<div class="menu-number font-serif"><%= item.menu_num %>.</div>
+								</div>
+								<div class="col-sm-6">
+									<h4 class="menu-title font-alt"><%= item.name %></h4>
+									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
 								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$16.99</h4>
+									<h4 class="menu-price font-alt">$<%= item.price %></h4>
 								</div>
 							</div>
 						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Bulgogi</h4>
-									<div class="menu-detail font-serif">B.B.Q. slices of beef marinated in house special sauce</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$14.99</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Galbi & Sundubu</h4>
-									<div class="menu-detail font-serif">B.B.Q. beef ribs seasoned with special sauce + your choice of soft tofu stew</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$17.99</h4>
-								</div>
-							</div>
-						</div>
-
+						<% end %>
+						<% end %>
+						<% end %>
+						<% end %>
 					</div>
 					<!-- Restaurant menu left col end -->
-
 					<!-- Restaurant menu right col start -->
 					<div class="col-sm-6">
-
+						<% category.items.each_with_index do |item, index| %>
+						<% if index % 2 == 1 %>
+						<% item.tag.each do |tag| %>
+						<% if tag == "favorite" %>
 						<div class="menu">
 							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Seafood & Beef Sundubu</h4>
-									<div class="menu-detail font-serif">Clam / Shrimp / Oyster / Beef in a soft tofu stew</div>
+								<div class="col-sm-1">
+									<div class="menu-flare">
+									<p class="fa fa-star-o"></p>
+									</div>
+								</div>
+								<div class="col-sm-1">
+									<div class="menu-number font-serif"><%= item.menu_num %>.</div>
+								</div>
+								<div class="col-sm-6">
+									<h4 class="menu-title font-alt"><%= item.name %></h4>
+									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
 								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$9.99</h4>
+									<h4 class="menu-price font-alt">$<%= item.price %></h4>
 								</div>
 							</div>
 						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Vegetable Sundubu</h4>
-									<div class="menu-detail font-serif">Broccoli / Mushroom / Squash / Carrot / Onion in a soft tofu stew</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$9.99</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="menu">
-							<div class="row">
-								<div class="col-sm-8">
-									<h4 class="menu-title font-alt">Beef Sundubu</h4>
-									<div class="menu-detail font-serif">Beef in a soft tofu stew</div>
-								</div>
-								<div class="col-sm-4 menu-price-detail">
-									<h4 class="menu-price font-alt">$9.99</h4>
-								</div>
-							</div>
-						</div>
-
+						<% end %>
+						<% end %>
+						<% end %>
+						<% end %>
 					</div>
 					<!-- Restaurant menu right col end -->
 
 				</div><!-- .row -->
+				<% end %>
 			</div>
 		</section>
 		<!-- popular menu end -->
@@ -296,7 +278,19 @@
 
 
 							<div class="row">
-								<div class="col-sm-8">
+								<div class="col-sm-1">
+									<div class="menu-flare">
+									<% item.tag.each do |tag| %>
+									<% if tag == "favorite" %><p class="fa fa-star-o"></p>
+									<% elsif tag == "spicy" %><p class="fa fa-fire"></p>
+									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
+									<% end %>
+									<% end %></div>
+								</div>
+								<div class="col-sm-1">
+									<div class="menu-number font-serif"><%= item.menu_num %>.</div>
+								</div>
+								<div class="col-sm-6">
 									<h4 class="menu-title font-alt"><%= item.name %></h4>
 									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
@@ -320,7 +314,19 @@
 
 
 							<div class="row">
-								<div class="col-sm-8">
+								<div class="col-sm-1">
+									<div class="menu-flare">
+									<% item.tag.each do |tag| %>
+									<% if tag == "favorite" %><p class="fa fa-star-o"></p>
+									<% elsif tag == "spicy" %><p class="fa fa-fire"></p>
+									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
+									<% end %>
+									<% end %></div>
+								</div>
+								<div class="col-sm-1">
+									<div class="menu-number font-serif"><%= item.menu_num %>.</div>
+								</div>
+								<div class="col-sm-6">
 									<h4 class="menu-title font-alt"><%= item.name %></h4>
 									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
