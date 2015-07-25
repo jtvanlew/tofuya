@@ -11,7 +11,11 @@ Version: 1.5.1
 /* ------------------------------------------------------------------
 General Styles
 ------------------------------------------------------------------- */
-
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
 html {
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -20,7 +24,7 @@ html {
 
 body {
 	background: #fff;
-	font: 400 12px/1.8 "Open Sans", sans-serif;
+	font: 400 14px/1.8 "Open Sans", sans-serif;
 	color: #666;
 	-webkit-font-smoothing: antialiased;
 }
@@ -950,8 +954,8 @@ Sections
 }
 
 .holder-w:before {
-	border-top: 1px solid #eaeaea;
-	position: relative;
+/*	border-top: 1px solid #eaeaea;
+*/	position: relative;
 	display: block;
 	content: "";
 	top: 1px;
@@ -1110,7 +1114,7 @@ Restaurant menu
 .menu-title,
 .menu-price {
 	margin: 0 0 10px;
-	font-size: 14px;
+	font-size: 16px;
 	color: #111;
 }
 
@@ -1118,7 +1122,10 @@ Restaurant menu
 	position: relative;
 	text-align: right;
 }
-.menu-number,
+.menu-number{
+	vertical-align: middle;
+	font-size: 20px;
+}
 .menu-flare {
 	font-size: 20px;
 }

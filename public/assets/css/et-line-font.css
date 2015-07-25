@@ -1,4 +1,8 @@
 @font-face {
+    font-family: 'Glyphicons';
+    src: url('../fonts/glyphicons.svg#glyphicon') format('svg');
+}
+@font-face {
 	font-family: 'et-line';
 	src:url('../fonts/et-line.eot');
 	src:url('../fonts/et-line.eot?#iefix') format('embedded-opentype'),

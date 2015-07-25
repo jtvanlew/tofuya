@@ -2,19 +2,19 @@ Category.destroy_all
 Item.destroy_all
 
 salad = Category.create({
-  name: "Salad",
+  name: "Salads",
   description: "",
   img: "salad.jpg",
   rank: "5"
   })
 bbq = Category.create({
-  name: "B.B.Q. Menu",
+  name: "Korean B.B.Q.",
   description: "",
   img: "bulgogi.jpg",
   rank: "2"
   })
 tofu = Category.create({
-  name: "Soft Tofu Stew",
+  name: "Soft Tofu Stews",
   description: "Served with steamed rice and assorted side dishes",
   img: "soondobu.jpg",
   rank: "1"
@@ -32,7 +32,7 @@ special = Category.create({
   rank: "4"
   })
 box = Category.create({
-  name: "Lunch Box",
+  name: "Lunch Boxes",
   description: "Mon - Fri, 11:30am - 2:30pm",
   img: "lunchbox.jpg",
   rank: "6"
@@ -48,7 +48,7 @@ Item.create([
   {
   name: "Tofu With Salad",
   price: "7.99",
-  tag: ["salad"],
+  tag: ["salad","veggie"],
   category: salad,
   menu_num: "37"
   },
@@ -62,7 +62,7 @@ Item.create([
   {
   name: "Green Salad",
   price: "2.99",
-  tag: ["salad"],
+  tag: ["salad","veggie"],
   category: salad,
   menu_num: "39"
   },
@@ -214,7 +214,7 @@ Item.create([
   name: "Vegetable",
   description: "Broccoli, mushroom, squash, carrot, onion",
   price: "9.99",
-  tag: ["tofu", "veggie"],
+  tag: ["tofu", "veggie","favorite"],
   category: tofu,
   menu_num: "12"
   },
@@ -262,7 +262,7 @@ Item.create([
   name: "Chicken Katsu & Sundubu",
   description: "Chicken cutlet + soft tofu stew",
   price: "14.99",
-  tag: ["combo"],
+  tag: ["combo","favorite"],
   category: tofu_combo,
   menu_num: "25"
   },

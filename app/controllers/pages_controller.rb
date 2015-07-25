@@ -1,8 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-  	@items = Item.all
-  	@categories = Category.all
+  	@categories = Category.order_by(:rank.asc)
   end
   def menu
   	

@@ -47,7 +47,6 @@
 				<ul class="nav navbar-nav navbar-right">
 
 					<li><a href="#totop">Home</a></li>
-					<li><a href="#about" class="section-scroll">About tofu</a></li>
 					<li class="dropdown">
 						<a href="#menu" class="dropdown-toggle section-scroll" data-toggle="dropdown">Menu</a>
 						<ul class="dropdown-menu">
@@ -89,57 +88,7 @@
 	<div class="main">
 
 		<!-- Video start -->
-		<section id="about" class="module module-video bg-dark-30" data-background="<%= image_url('section-12.jpg') %>">
-
-			<div class="container">
-
-				<div class="row">
-
-					<div class="col-sm-3 pull-right">
-						<h2 class="module-title font-alt align-right">Soybean & Tofu</h2>
-					</div>
-
-				</div><!-- .row -->
-
-				<div class="row">
-
-					<div class="col-sm-3 pull-right">
-						<p class="font-serif">The soybean is often referred to as the perfect source of vegetable protein. It has a unique formation that provides an excellent balance of nutrients. Soybeans are the only members of the vegetable family that have more protein than meat products -- and it's healthier too!</p>
-						<!-- <p class="font-serif">The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.</p> -->
-						<p class="font-serif">Tofu is made from soybeans. It is high in protein and calcium, low in saturated fat and salt, and completely cholesterol-free.
-						</p>
-<!--
-					<div class="col-sm-3 pull-right">
-
-						<ul>
-							<li>Tofu reduces the risk of cancer</li>
-							<li>Tofu protects & strengthens the heart</li>
-							<li>Tofu preserves bone mass</li>
-							<li>Tofu is rich in iron and isoflavones/phytoestrogen, two of the main nutrients that are necessary for a healthy human body</li>
-							<li>Tofu reduces menopause symptoms such as hot flashes, sweating, etc.</li>
-						</ul>
-					</div> -->
-
-				</div><!-- .row -->
-
-			</div>
-
-			<!-- Youtube player start-->
-			<div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=Vx6J8O8JOOE', containment:'.module-video', startAt:0, mute:false, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25, mute:true}"></div>
-			<!-- Youtube player end -->
-
-			<!-- Youtube controls start-->
-			<div class="video-controls-box">
-				<div class="container">
-					<div class="video-controls">
-						<a id="video-volume" class="fa fa-volume-off" href="#">&nbsp;</a>
-						<a id="video-play" class="fa fa-pause" href="#">&nbsp;</a>
-					</div>
-				</div>
-			</div>
-			<!-- Youtube controls end -->
-
-		</section>
+		<!--  -->
 		<!-- Video end -->
 
 		<!-- Popular menu start -->
@@ -167,27 +116,21 @@
 
 				</div><!-- .row -->
 				<!-- Module header end -->
-				<% @categories.each do |category| %>
+				
 				<div class="row multi-columns-row">
-
+					<% items = Item.where(tag:"favorite").order(:menu_num.asc) %>
 					<!-- Restaurant menu left col start -->
 					<div class="col-sm-6">
-						<% category.items.each_with_index do |item, index| %>
-						<% if index % 2 == 0 %>
-						<% item.tag.each do |tag| %>
-						<% if tag == "favorite" %>
+						<% items[0..((items.count-0.5)/2)].each_with_index do |item, index| %>
 						<div class="menu">
 							<div class="row">
-								<div class="col-sm-1">
-									<div class="menu-flare">
-									<p class="fa fa-star-o"></p>
-									</div>
-								</div>
-								<div class="col-sm-1">
-									<div class="menu-number font-serif"><%= item.menu_num %>.</div>
-								</div>
-								<div class="col-sm-6">
-									<h4 class="menu-title font-alt"><%= item.name %></h4>
+								<div class="col-sm-8">
+									<h4 class="menu-title font-alt"><%= item.menu_num %>. <%= item.name %>
+									<% item.tag.each do |tag| %>
+									<% if tag == "spicy" %><span class="glyphicon glyphicon-fire">
+									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
+									<% end %>
+									<% end %></h4>
 									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
 								<div class="col-sm-4 menu-price-detail">
@@ -195,30 +138,22 @@
 								</div>
 							</div>
 						</div>
-						<% end %>
-						<% end %>
-						<% end %>
 						<% end %>
 					</div>
 					<!-- Restaurant menu left col end -->
 					<!-- Restaurant menu right col start -->
 					<div class="col-sm-6">
-						<% category.items.each_with_index do |item, index| %>
-						<% if index % 2 == 1 %>
-						<% item.tag.each do |tag| %>
-						<% if tag == "favorite" %>
+						<% items[((items.count)/2)..-1].each_with_index do |item, index| %>
 						<div class="menu">
 							<div class="row">
-								<div class="col-sm-1">
-									<div class="menu-flare">
-									<p class="fa fa-star-o"></p>
-									</div>
-								</div>
-								<div class="col-sm-1">
-									<div class="menu-number font-serif"><%= item.menu_num %>.</div>
-								</div>
-								<div class="col-sm-6">
-									<h4 class="menu-title font-alt"><%= item.name %></h4>
+								<div class="col-sm-8">
+									<h4 class="menu-title font-alt"><%= item.menu_num %>. <%= item.name %>
+									<% item.tag.each do |tag| %>
+									<% if tag == "favorite" %><span class="fa fa-star">
+									<% elsif tag == "spicy" %><span class="glyphicon glyphicon-fire">
+									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
+									<% end %>
+									<% end %></h4>
 									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
 								<div class="col-sm-4 menu-price-detail">
@@ -227,14 +162,10 @@
 							</div>
 						</div>
 						<% end %>
-						<% end %>
-						<% end %>
-						<% end %>
 					</div>
 					<!-- Restaurant menu right col end -->
 
 				</div><!-- .row -->
-				<% end %>
 			</div>
 		</section>
 		<!-- popular menu end -->
@@ -242,17 +173,18 @@
 
 		<!-- Menu header start -->
 		<% @categories.each do |category| %>
+		<% items = category.items.order(:menu_num.asc) %>
 		<section id="<%= category.name.parameterize %>" class="module bg-dark bg-dark-10" data-background="<%= image_url(category.img)%>">
 			<div class="container">
 
 
 				<div class="row">
-					<div class="col-sm-8 col-sm-offset-2">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 btn-dark">
 						<h2 class="module-title font-alt mb-0"><b><%= category.name%></b></h2>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-2 col-sm-offset-5 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 btn-dark">
 						<div class="alt-module-subtitle">
 							<% if !category.description.blank? %>
 							<span class="holder-w"></span>
@@ -272,71 +204,56 @@
 				<div class="row multi-columns-row">
 					<!-- Restaurant menu left col start -->
 					<div class="col-sm-6">
-						<% category.items.each_with_index do |item, index| %>
-						<% if index % 2 == 0 %>
+						<% items[0..((items.count-0.5)/2)].each_with_index do |item, index| %>
 						<div class="menu">
 
 
 							<div class="row">
-								<div class="col-sm-1">
-									<div class="menu-flare">
+								<div class="col-sm-8 col-md-8">
+									<h4 class="menu-title font-alt"><%= item.menu_num %>. <%= item.name %>
 									<% item.tag.each do |tag| %>
-									<% if tag == "favorite" %><p class="fa fa-star-o"></p>
-									<% elsif tag == "spicy" %><p class="fa fa-fire"></p>
+									<% if tag == "favorite" %><span class="fa fa-star">
+									<% elsif tag == "spicy" %><span class="glyphicon glyphicon-fire">
 									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
 									<% end %>
-									<% end %></div>
-								</div>
-								<div class="col-sm-1">
-									<div class="menu-number font-serif"><%= item.menu_num %>.</div>
-								</div>
-								<div class="col-sm-6">
-									<h4 class="menu-title font-alt"><%= item.name %></h4>
+									<% end %></h4>
 									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
-								<div class="col-sm-4 menu-price-detail">
+								<div class="col-sm-4 col-md-4 menu-price-detail">
 									<h4 class="menu-price font-alt">$<%= item.price %></h4>
 								</div>
 							</div>
 
 
 						</div>
-						<% end %>
 						<% end %>
 
 					</div>
 					<!-- Restaurant menu left col end -->
 					<!-- Restaurant menu right col start -->
 					<div class="col-sm-6">
-						<% category.items.each_with_index do |item, index| %>
-						<% if index % 2 == 1 %>
+						<% items[((items.count-0.5)/2+1)..-1].each_with_index do |item, index| %>
+
 						<div class="menu">
 
 
 							<div class="row">
-								<div class="col-sm-1">
-									<div class="menu-flare">
+								<div class="col-sm-8 col-md-8">
+									<h4 class="menu-title font-alt"><%= item.menu_num %>. <%= item.name %>
 									<% item.tag.each do |tag| %>
-									<% if tag == "favorite" %><p class="fa fa-star-o"></p>
-									<% elsif tag == "spicy" %><p class="fa fa-fire"></p>
+									<% if tag == "favorite" %><span class="fa fa-star">
+									<% elsif tag == "spicy" %><span class="glyphicon glyphicon-fire">
 									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
 									<% end %>
-									<% end %></div>
-								</div>
-								<div class="col-sm-1">
-									<div class="menu-number font-serif"><%= item.menu_num %>.</div>
-								</div>
-								<div class="col-sm-6">
-									<h4 class="menu-title font-alt"><%= item.name %></h4>
+									<% end %></h4>
 									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
-								<div class="col-sm-4 menu-price-detail">
+								<div class="col-sm-4 col-md-4 menu-price-detail">
 									<h4 class="menu-price font-alt">$<%= item.price %></h4>
 								</div>
 							</div>
 
 						</div>
-						<% end %>
 						<% end %>
 
 					</div>
