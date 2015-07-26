@@ -101,27 +101,27 @@
 		 * Youtube video background
 		/* ---------------------------------------------- */
 
-		$(function(){
-			$(".video-player").mb_YTPlayer();
-		});
+		// $(function(){
+		// 	$(".video-player").mb_YTPlayer();
+		// });
 
-		$('#video-play').click(function(event) {
-			event.preventDefault();
-			if ($(this).hasClass('fa-play')) {
-				$('.video-player').playYTP();
-			} else {
-				$('.video-player').pauseYTP();
-			}
-			$(this).toggleClass('fa-play fa-pause');
-			return false;
-		});
+		// $('#video-play').click(function(event) {
+		// 	event.preventDefault();
+		// 	if ($(this).hasClass('fa-play')) {
+		// 		$('.video-player').playYTP();
+		// 	} else {
+		// 		$('.video-player').pauseYTP();
+		// 	}
+		// 	$(this).toggleClass('fa-play fa-pause');
+		// 	return false;
+		// });
 
-		$('#video-volume').click(function(event) {
-			event.preventDefault();
-			$('.video-player').toggleVolume();
-			$(this).toggleClass('fa-volume-off fa-volume-up');
-			return false;
-		});
+		// $('#video-volume').click(function(event) {
+		// 	event.preventDefault();
+		// 	$('.video-player').toggleVolume();
+		// 	$(this).toggleClass('fa-volume-off fa-volume-up');
+		// 	return false;
+		// });
 
 		/* ---------------------------------------------- /*
 		 * Transparent navbar animation
