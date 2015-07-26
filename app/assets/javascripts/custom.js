@@ -78,24 +78,24 @@
 		 * Intro slider setup
 		/* ---------------------------------------------- */
 
-		if( $('.hero-slider').length > 0 ) {
-			$('.hero-slider').flexslider( {
-				animation: "fade",
-				animationSpeed: 1000,
-				animationLoop: true,
-				prevText: '',
-				nextText: '',
-				before: function(slider) {
-					$('.hs-caption').fadeOut().animate({top:'-80px'},{queue:false, easing: 'swing', duration: 700});
-					slider.slides.eq(slider.currentSlide).delay(500);
-					slider.slides.eq(slider.animatingTo).delay(500);
-				},
-				after: function(slider) {
-					$('.hs-caption').fadeIn().animate({top:'0'},{queue:false, easing: 'swing', duration: 700});
-				},
-				useCSS: true
-			});
-		}
+		// if( $('.hero-slider').length > 0 ) {
+		// 	$('.hero-slider').flexslider( {
+		// 		animation: "fade",
+		// 		animationSpeed: 1000,
+		// 		animationLoop: true,
+		// 		prevText: '',
+		// 		nextText: '',
+		// 		before: function(slider) {
+		// 			$('.hs-caption').fadeOut().animate({top:'-80px'},{queue:false, easing: 'swing', duration: 700});
+		// 			slider.slides.eq(slider.currentSlide).delay(500);
+		// 			slider.slides.eq(slider.animatingTo).delay(500);
+		// 		},
+		// 		after: function(slider) {
+		// 			$('.hs-caption').fadeIn().animate({top:'0'},{queue:false, easing: 'swing', duration: 700});
+		// 		},
+		// 		useCSS: true
+		// 	});
+		// }
 
 		/* ---------------------------------------------- /*
 		 * Youtube video background
@@ -285,17 +285,17 @@
 		 * Testimonials, Post sliders
 		/* ---------------------------------------------- */
 
-		if ($('.testimonials-slider').length > 0 ) {
-			$('.testimonials-slider').flexslider( {
-				animation: "slide",
-				smoothHeight: true,
-			});
-		}
+		// if ($('.testimonials-slider').length > 0 ) {
+		// 	$('.testimonials-slider').flexslider( {
+		// 		animation: "slide",
+		// 		smoothHeight: true,
+		// 	});
+		// }
 
-		$('.post-images-slider').flexslider( {
-			animation: "slide",
-			smoothHeight: true,
-		});
+		// $('.post-images-slider').flexslider( {
+		// 	animation: "slide",
+		// 	smoothHeight: true,
+		// });
 
 		/* ---------------------------------------------- /*
 		 * Owl slider
@@ -342,22 +342,22 @@
 		 * Video popup, Gallery
 		/* ---------------------------------------------- */
 
-		$('.video-pop-up').magnificPopup({
-			type: 'iframe',
-		});
+		// $('.video-pop-up').magnificPopup({
+		// 	type: 'iframe',
+		// });
 
-		$('a.gallery').magnificPopup({
-			type: 'image',
-			gallery: {
-				enabled: true,
-				navigateByImgClick: true,
-				preload: [0,1]
-			},
-			image: {
-				titleSrc: 'title',
-				tError: 'The image could not be loaded.',
-			}
-		});
+		// $('a.gallery').magnificPopup({
+		// 	type: 'image',
+		// 	gallery: {
+		// 		enabled: true,
+		// 		navigateByImgClick: true,
+		// 		preload: [0,1]
+		// 	},
+		// 	image: {
+		// 		titleSrc: 'title',
+		// 		tError: 'The image could not be loaded.',
+		// 	}
+		// });
 
 		/* ---------------------------------------------- /*
 		 * WOW Animation When You Scroll
@@ -372,11 +372,11 @@
 		 * Rotate
 		/* ---------------------------------------------- */
 
-		$(".rotate").textrotator({
-			animation: "dissolve",
-			separator: "|",
-			speed: 3000
-		});
+		// $(".rotate").textrotator({
+		// 	animation: "dissolve",
+		// 	separator: "|",
+		// 	speed: 3000
+		// });
 
 		/* ---------------------------------------------- /*
 		 * A jQuery plugin for fluid width video embeds
