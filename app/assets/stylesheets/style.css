@@ -11,6 +11,12 @@ Version: 1.5.1
 /* ------------------------------------------------------------------
 General Styles
 ------------------------------------------------------------------- */
+
+.fa-wikipedia:before {
+	font-family: "Times New Roman", Times, serif; font-weight: 400;
+	content: "VV"; letter-spacing:-0.45em; margin-right:0.5em;
+}
+
 .btn-dark {
     border-radius: 0;
     color: #fff;
