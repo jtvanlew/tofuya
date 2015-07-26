@@ -104,7 +104,9 @@
 								<div class="col-sm-8">
 									<h4 class="menu-title font-alt"><%= item.menu_num %>. <%= item.name %>
 									<% item.tag.each do |tag| %>
-									<% if tag == "spicy" %><span class="glyphicon glyphicon-fire">
+									<% if tag == "tofu" %> Soon Tofu
+									<% elsif tag == "combo" %> Combo
+									<% elsif tag == "spicy" %><span class="glyphicon glyphicon-fire">
 									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
 									<% end %>
 									<% end %></h4>
@@ -126,7 +128,8 @@
 								<div class="col-sm-8">
 									<h4 class="menu-title font-alt"><%= item.menu_num %>. <%= item.name %>
 									<% item.tag.each do |tag| %>
-									<% if tag == "favorite" %><span class="fa fa-star">
+									<% if tag == "tofu" %> Soon Tofu
+									<% elsif tag == "combo" %> Combo
 									<% elsif tag == "spicy" %><span class="glyphicon glyphicon-fire">
 									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
 									<% end %>
