@@ -14,13 +14,13 @@ bbq = Category.create({
   rank: "2"
   })
 tofu = Category.create({
-  name: "Soft Tofu Stews",
+  name: "Soon Tofu Stews",
   description: "Served with steamed rice and assorted side dishes",
   img: "soondobu.jpg",
   rank: "1"
   })
 tofu_combo = Category.create({
-  name: "Soft Tofu Combo Plates",
+  name: "Soon Tofu Combo Plates",
   description: "Served with rice, any choice of soft tofu stew",
   img: "combo.jpg",
   rank: "3"
@@ -219,7 +219,7 @@ Item.create([
   menu_num: "12"
   },
   {
-  name: "Galbi & Sundubu",
+  name: "Galbi & Soon Tofu",
   description: "B.B.Q. beef ribs seasoned with special sauce + soft tofu stew",
   price: "17.99",
   tag: ["combo","favorite"],
@@ -227,7 +227,7 @@ Item.create([
   menu_num: "20"
   },
   {
-  name: "Bulgogi & Sundubu",
+  name: "Bulgogi & Soon Tofu",
   description: "Thin slices of beef marinated in a soy sauce + soft tofu stew",
   price: "15.99",
   tag: ["combo","favorite"],
@@ -235,7 +235,7 @@ Item.create([
   menu_num: "21"
   },
   {
-  name: "Pork Bulgogi & Sundubu",
+  name: "Pork Bulgogi & Soon Tofu",
   description: "Thin slices of pork marinated in spicy sauce + soft tofu stew",
   price: "15.99",
   tag: ["combo", "spicy"],
@@ -243,7 +243,7 @@ Item.create([
   menu_num: "22"
   },
   {
-  name: "Chicken Bulgogi & Sundubu",
+  name: "Chicken Bulgogi & Soon Tofu",
   description: "Thin slices of chicken marinated in spicy sauce + soft tofu stew",
   price: "15.99",
   tag: ["combo","spicy"],
@@ -251,7 +251,7 @@ Item.create([
   menu_num: "23"
   },
   {
-  name: "Chicken Teriyaki & Sundubu",
+  name: "Chicken Teriyaki & Soon Tofu",
   description: "Thin slices of pork marinated in spicy sauce + soft tofu stew",
   price: "14.99",
   tag: ["combo"],
@@ -259,7 +259,7 @@ Item.create([
   menu_num: "24"
   },
   {
-  name: "Chicken Katsu & Sundubu",
+  name: "Chicken Katsu & Soon Tofu",
   description: "Chicken cutlet + soft tofu stew",
   price: "14.99",
   tag: ["combo","favorite"],
@@ -267,7 +267,7 @@ Item.create([
   menu_num: "25"
   },
   {
-  name: "Pork Katsu & Sundubu",
+  name: "Pork Katsu & Soon Tofu",
   description: "Pork cutlet + soft tofu stew",
   price: "15.99",
   tag: ["combo"],
@@ -275,7 +275,7 @@ Item.create([
   menu_num: "26"
   },
   {
-  name: "Kimchi Dolsot Bibimbop & Sundubu",
+  name: "Kimchi Dolsot Bibimbop & Soon Tofu",
   description: "This meal is served in a piping hot earthenware pot consisting of rice, cooked vegetables, & kimchi mixed with red chili paste (gochujang) + soft tofu stew",
   price: "14.99",
   tag: ["combo"],
@@ -283,7 +283,7 @@ Item.create([
   menu_num: "27"
   },
   {
-  name: "Dolsot Bibimbap & Sundubu",
+  name: "Dolsot Bibimbap & Soon Tofu",
   description: "This meal is served in a piping hot earthenware pot consisting of rice, cooked vegetables, & beef mixed with red chili paste (gochujang) + soft tofu stew",
   price: "13.99",
   tag: ["combo"],
@@ -291,7 +291,7 @@ Item.create([
   menu_num: "28"
   },
   {
-  name: "Bibimbap & Sundubu",
+  name: "Bibimbap & Soon Tofu",
   description: "Rice topped with various cooked vegetables, beef, and a fried egg, served with red chili paste (gochujang) + soft tofu stew",
   price: "12.99",
   tag: ["combo"],
