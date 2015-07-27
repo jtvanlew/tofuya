@@ -965,6 +965,24 @@ Sections
 }
 
 .holder-w:before {
+	border-top: 1px solid #eaeaea;
+	position: relative;
+	display: block;
+	content: "";
+	top: 1px;
+	height: 1px;
+	width: 100%;
+}
+
+.holder-d {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	height: 1px;
+	width: 50%;
+}
+
+.holder-d:before {
 /*	border-top: 1px solid #eaeaea;
 */	position: relative;
 	display: block;
