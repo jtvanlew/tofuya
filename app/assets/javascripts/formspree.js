@@ -16,10 +16,14 @@
         },
         success: function(data) {
           $contactForm.find('.alert--loading').hide();
+          $contactForm.find('.alert--success').hide();
+          $contactForm.find('.alert--error').hide();
           $contactForm.append('<div class="alert alert--success">Message sent!</div>');
         },
         error: function(err) {
           $contactForm.find('.alert--loading').hide();
+          $contactForm.find('.alert--success').hide();
+          $contactForm.find('.alert--error').hide();
           $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
         }
       });
