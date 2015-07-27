@@ -3,7 +3,7 @@ Project: Rival
 Version: 1.5.1
 ------------------------------------------------------------------ */
 
-@import url("slider.css");
+/*@import url("slider.css");*/
 @import url("http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700");
 @import url("http://fonts.googleapis.com/css?family=Volkhov:400italic");
@@ -726,6 +726,11 @@ Navbar
 	color: #fff;
 }
 
+.navbar-custom .navbar-brand img {
+	height: 100%;
+	float: left;
+}
+
 .navbar-custom .nav li > a {
 	position: relative;
 	color: rgba(255, 255, 255, .7);
@@ -829,7 +834,7 @@ Home Section
 
 .home-section {
 	position: relative;
-	background-color: #fff;
+	background-color: black;
 	background-repeat: no-repeat;
 	background-position: center center;
 	width: 100%;
