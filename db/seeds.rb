@@ -5,37 +5,43 @@ salad = Category.create({
   name: "Salads",
   description: "",
   img: "salad.jpg",
-  rank: "5"
+  rank: "5",
+  kname: "샐러드"
   })
 bbq = Category.create({
   name: "Korean B.B.Q.",
   description: "",
   img: "bulgogi.jpg",
-  rank: "2"
+  rank: "2",
+  kname: ""
   })
 tofu = Category.create({
   name: "Soon Tofu Stews",
   description: "Served with steamed rice and assorted side dishes",
   img: "soondobu.jpg",
-  rank: "1"
+  rank: "1",
+  kname: "순두부찌개"
   })
 tofu_combo = Category.create({
   name: "Soon Tofu Combo Plates",
   description: "Served with rice, any choice of soft tofu stew",
   img: "combo.jpg",
-  rank: "3"
+  rank: "3",
+  kname: "콤보"
   })
 special = Category.create({
   name: "Specials",
   description: "",
   img: "specials.jpg",
-  rank: "4"
+  rank: "4",
+  kname: ""
   })
 box = Category.create({
   name: "Lunch Boxes",
   description: "Mon - Fri, 11:30am - 2:30pm",
   img: "lunchbox.jpg",
-  rank: "6"
+  rank: "6",
+  kname: ""
   })
 Item.create([
   {
@@ -43,28 +49,32 @@ Item.create([
   price: "10.99",
   tag: ["salad"],
   category: salad,
-  menu_num: "36"
+  menu_num: "36",
+  kname: ""
   },
   {
   name: "Tofu With Salad",
   price: "7.99",
   tag: ["salad","veggie"],
   category: salad,
-  menu_num: "37"
+  menu_num: "37",
+  kname: ""
   },
   {
   name: "Chicken Teriyaki With Salad",
   price: "8.99",
   tag: ["salad"],
   category: salad,
-  menu_num: "38"
+  menu_num: "38",
+  kname: ""
   },
   {
   name: "Green Salad",
   price: "2.99",
   tag: ["salad","veggie"],
   category: salad,
-  menu_num: "39"
+  menu_num: "39",
+  kname: ""
   },
   {
   name: "Galbi",
@@ -72,7 +82,8 @@ Item.create([
   price: "16.99",
   tag: ["bbq"],
   category: bbq,
-  menu_num: "13"
+  menu_num: "13",
+  kname: "갈비"
   },
   {
   name: "Bulgogi",
@@ -80,7 +91,8 @@ Item.create([
   price: "14.99",
   tag: ["bbq"],
   category: bbq,
-  menu_num: "14"
+  menu_num: "14",
+  kname: "불고기"
   },
   {
   name: "Pork Bulgogi",
@@ -88,7 +100,8 @@ Item.create([
   price: "14.99",
   tag: ["bbq","spicy"],
   category: bbq,
-  menu_num: "15"
+  menu_num: "15",
+  kname: "돼지불고기"
   },
   {
   name: "Chicken Bulgogi",
@@ -96,7 +109,8 @@ Item.create([
   price: "14.99",
   tag: ["bbq","spicy"],
   category: bbq,
-  menu_num: "16"
+  menu_num: "16",
+  kname: "치킨불고기"
   },
   {
   name: "Chicken Katsu",
@@ -104,7 +118,8 @@ Item.create([
   price: "11.99",
   tag: ["bbq"],
   category: bbq,
-  menu_num: "18"
+  menu_num: "18",
+  kname: "치킨까스"
   },
   {
   name: "Pork Katsu",
@@ -112,7 +127,8 @@ Item.create([
   price: "13.99",
   tag: ["bbq"],
   category: bbq,
-  menu_num: "19"
+  menu_num: "19",
+  kname: "돼지까스"
   },
   {
   name: "Chicken Teriyaki",
@@ -120,7 +136,8 @@ Item.create([
   price: "10.99",
   tag: ["bbq"],
   category: bbq,
-  menu_num: "17"
+  menu_num: "17",
+  kname: "치킨데리야끼"
   },
   {
   name: "Seafood",
@@ -128,7 +145,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu","favorite"],
   category: tofu,
-  menu_num: "1"
+  menu_num: "1",
+  kname: "순두부"
   },
   {
   name: "Seafood & Beef",
@@ -136,7 +154,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu","favorite"],
   category: tofu,
-  menu_num: "2"
+  menu_num: "2",
+  kname: "순두부"
   },
   {
   name: "Oyster",
@@ -144,7 +163,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu"],
   category: tofu,
-  menu_num: "3"
+  menu_num: "3",
+  kname: "굴순두부"
   },
   {
   name: "Mushroom",
@@ -152,7 +172,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu","favorite"],
   category: tofu,
-  menu_num: "4"
+  menu_num: "4",
+  kname: "버섯순두부"
   },
   {
   name: "Pork",
@@ -160,7 +181,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu"],
   category: tofu,
-  menu_num: "6"
+  menu_num: "6",
+  kname: "돼지순두부"
   },
   {
   name: "Clam",
@@ -168,7 +190,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu"],
   category: tofu,
-  menu_num: "7"
+  menu_num: "7",
+  kname: "순두부"
   },
   {
   name: "Beef",
@@ -176,7 +199,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu","favorite"],
   category: tofu,
-  menu_num: "8"
+  menu_num: "8",
+  kname: "쇠고기순두부"
   },
   {
   name: "Dumpling",
@@ -184,7 +208,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu"],
   category: tofu,
-  menu_num: "9"
+  menu_num: "9",
+  kname: "순두부"
   },
   {
   name: "Denjang",
@@ -192,7 +217,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu"],
   category: tofu,
-  menu_num: "10"
+  menu_num: "10",
+  kname: "된장순두부"
   },
   {
   name: "Kimchi",
@@ -200,7 +226,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu"],
   category: tofu,
-  menu_num: "5"
+  menu_num: "5",
+  kname: "김치순두부"
   },
   {
   name: "Chicken",
@@ -208,7 +235,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu"],
   category: tofu,
-  menu_num: "11"
+  menu_num: "11",
+  kname: "순두부"
   },
   {
   name: "Vegetable",
@@ -216,7 +244,8 @@ Item.create([
   price: "9.99",
   tag: ["tofu", "veggie","favorite"],
   category: tofu,
-  menu_num: "12"
+  menu_num: "12",
+  kname: "야채순두부"
   },
   {
   name: "Galbi & Soon Tofu",
@@ -224,7 +253,8 @@ Item.create([
   price: "17.99",
   tag: ["combo","favorite"],
   category: tofu_combo,
-  menu_num: "20"
+  menu_num: "20",
+  kname: "갈비+순두부찌개"
   },
   {
   name: "Bulgogi & Soon Tofu",
@@ -232,7 +262,8 @@ Item.create([
   price: "15.99",
   tag: ["combo","favorite"],
   category: tofu_combo,
-  menu_num: "21"
+  menu_num: "21",
+  kname: "불고기+순두부찌개"
   },
   {
   name: "Pork Bulgogi & Soon Tofu",
@@ -240,7 +271,8 @@ Item.create([
   price: "15.99",
   tag: ["combo", "spicy"],
   category: tofu_combo,
-  menu_num: "22"
+  menu_num: "22",
+  kname: "돼지불고기+순두부찌개"
   },
   {
   name: "Chicken Bulgogi & Soon Tofu",
@@ -248,7 +280,8 @@ Item.create([
   price: "15.99",
   tag: ["combo","spicy"],
   category: tofu_combo,
-  menu_num: "23"
+  menu_num: "23",
+  kname: "치킨불고기+순두부찌개"
   },
   {
   name: "Chicken Teriyaki & Soon Tofu",
@@ -256,7 +289,8 @@ Item.create([
   price: "14.99",
   tag: ["combo"],
   category: tofu_combo,
-  menu_num: "24"
+  menu_num: "24",
+  kname: "치킨데리야끼+순두부찌개"
   },
   {
   name: "Chicken Katsu & Soon Tofu",
@@ -264,7 +298,8 @@ Item.create([
   price: "14.99",
   tag: ["combo","favorite"],
   category: tofu_combo,
-  menu_num: "25"
+  menu_num: "25",
+  kname: "치킨까스+순두부찌개"
   },
   {
   name: "Pork Katsu & Soon Tofu",
@@ -272,15 +307,17 @@ Item.create([
   price: "15.99",
   tag: ["combo"],
   category: tofu_combo,
-  menu_num: "26"
+  menu_num: "26",
+  kname: "돼지까스+순두부찌개"
   },
   {
-  name: "Kimchi Dolsot Bibimbop & Soon Tofu",
+  name: "Kimchi Dolsot Bibimbap & Soon Tofu",
   description: "This meal is served in a piping hot earthenware pot consisting of rice, cooked vegetables, & kimchi mixed with red chili paste (gochujang) + soft tofu stew",
   price: "14.99",
   tag: ["combo"],
   category: tofu_combo,
-  menu_num: "27"
+  menu_num: "27",
+  kname: "김치돌솥비빔밥+순두부찌개"
   },
   {
   name: "Dolsot Bibimbap & Soon Tofu",
@@ -288,7 +325,8 @@ Item.create([
   price: "13.99",
   tag: ["combo"],
   category: tofu_combo,
-  menu_num: "28"
+  menu_num: "28",
+  kname: "돌솥비빔밥+순두부찌개"
   },
   {
   name: "Bibimbap & Soon Tofu",
@@ -296,7 +334,8 @@ Item.create([
   price: "12.99",
   tag: ["combo"],
   category: tofu_combo,
-  menu_num: "29"
+  menu_num: "29",
+  kname: "비빔밥+순두부찌개"
   },
   {
   name: "Udon & California Roll",
@@ -304,23 +343,26 @@ Item.create([
   price: "9.99",
   tag: ["combo"],
   category: tofu_combo,
-  menu_num: "30"
+  menu_num: "30",
+  kname: "우동+캘리포니아롤"
   },
   {
-  name: "Dolsot Bibimbop",
+  name: "Dolsot Bibimbap",
   description: "This meal is served in a piping hot earthenware pot consisting of rice, cooked vegetables, & beef mixed with red chili paste (gochujang). This item can switch to a veggie version by substituting tofu for beef.",
   price: "9.99",
   tag: ["special"],
   category: special,
-  menu_num: "31"
+  menu_num: "31",
+  kname: "돌솥비빔밥"
   },
   {
-  name: "Bibimbop",
+  name: "Bibimbap",
   description: "Rice topped with various cooked vegetables, beef, and a fried egg, served with red chili paste (gochujang). This item can switch to a veggie version by substituting tofu for beef.",
   price: "8.99",
   tag: ["special"],
   category: special,
-  menu_num: "33"
+  menu_num: "33",
+  kname: "비빔밥"
   },
   {
   name: "Udon",
@@ -328,7 +370,8 @@ Item.create([
   price: "6.99",
   tag: ["special"],
   category: special,
-  menu_num: "34"
+  menu_num: "34",
+  kname: "우동"
   },
   {
   name: "California Roll",
@@ -336,22 +379,25 @@ Item.create([
   price: "4.99",
   tag: ["special"],
   category: special,
-  menu_num: "35"
+  menu_num: "35",
+  kname: "캘리포니아롤"
   },
   {
-  name: "Kimchi Dolsot Bibimbop",
+  name: "Kimchi Dolsot Bibimbap",
   description: "This meal is served in a piping hot earthenware pot consisting of rice, cooked vegetables, & kimchi mixed with red chili paste (gochujang)",
   price: "10.99",
   tag: ["special"],
   category: special,
-  menu_num: "32"
+  menu_num: "32",
+  kname: "김치돌솥비빔밥"
   },
   {
   name: "Lunch Box",
-  description: "4pcs California roll, chicken teriyaki, salad, spring roll, edamame",
+  description: "4pc California roll, chicken teriyaki, salad, spring roll, edamame",
   price: "10.99",
   tag: ["lunch box"],
   category: box,
-  menu_num: "40"
+  menu_num: "40",
+  kname: ""
   }
 ])

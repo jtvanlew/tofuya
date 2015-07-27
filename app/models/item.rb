@@ -8,5 +8,6 @@ class Item
   field :description,     type: String
   field :tag,             type: Array
   field :menu_num, 		  type: Integer
+  field :kname,			  type: String
 
 end

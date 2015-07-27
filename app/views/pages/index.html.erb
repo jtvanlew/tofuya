@@ -111,6 +111,7 @@
 									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
 									<% end %>
 									<% end %></h4>
+									<h4 class="menu-title font-alt"><%= item.kname %></h4>
 									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
 								<div class="col-sm-4 menu-price-detail">
@@ -135,6 +136,7 @@
 									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
 									<% end %>
 									<% end %></h4>
+									<h4 class="menu-title font-alt"><%= item.kname %></h4>
 									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
 								<div class="col-sm-4 menu-price-detail">
@@ -161,7 +163,8 @@
 
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 btn-dark">
-						<h2 class="module-title font-alt mb-0"><b><%= category.name%></b></h2>
+						<h2 class="module-title font-alt mb-0 float-left"><b><%= category.name%></b></h2>
+						<h2 class="module-title font-alt mb-0 float-right"<b><%= category.kname%></b></h2>
 					</div>
 				</div>
 				<div class="row">
@@ -226,6 +229,7 @@
 									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
 									<% end %>
 									<% end %></h4>
+									<h4 class="menu-title font-alt"><%= item.kname %></h4>
 									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
 								<div class="col-sm-4 col-md-4 menu-price-detail">
@@ -255,6 +259,7 @@
 									<% elsif tag == "veggie" %><span class="vegetarianicon">Ⓥ</span>
 									<% end %>
 									<% end %></h4>
+									<h4 class="menu-title font-alt"><%= item.kname %></h4>
 									<div class="menu-detail font-serif"><%= item.description %></div>
 								</div>
 								<div class="col-sm-4 col-md-4 menu-price-detail">

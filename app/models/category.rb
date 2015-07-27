@@ -8,5 +8,6 @@ class Category
   field :description,	   type: String
   field :img,              type: String
   field :rank,			   type: Integer
+  field :kname,			   type: String
 
 end
