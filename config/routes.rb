@@ -6,10 +6,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#index'
-  get 'menu' => 'pages#menu'
-  get 'index', :to => redirect('/')
-  # get 'menu', :to => redirect('/')
-  post 'sign_up' => 'pages#sign_up'
+  match "*path", to: redirect('/'), via: :all
+  # get 'menu' => 'pages#menu'
+  # get 'index' => 'pages#index'
+  # get 'index.html' => 'pages#index'
+  # # get 'menu', :to => redirect('/')
+  # post 'sign_up' => 'pages#sign_up'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
