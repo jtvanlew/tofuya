@@ -6,14 +6,14 @@ salad = Category.create({
   description: "",
   img: "salad.jpg",
   rank: "5",
-  kname: "샐러드"
+  kname: "샐러드 메뉴"
   })
 bbq = Category.create({
   name: "Korean B.B.Q.",
   description: "",
   img: "bulgogi.jpg",
   rank: "2",
-  kname: ""
+  kname: "코리안 비비큐"
   })
 tofu = Category.create({
   name: "Soon Tofu Stews",
@@ -27,21 +27,21 @@ tofu_combo = Category.create({
   description: "Served with rice, any choice of soft tofu stew",
   img: "combo.jpg",
   rank: "3",
-  kname: "콤보"
+  kname: "순두부 콤보 메뉴"
   })
 special = Category.create({
   name: "Specials",
   description: "",
   img: "specials.jpg",
   rank: "4",
-  kname: ""
+  kname: "특별 메뉴"
   })
 box = Category.create({
   name: "Lunch Boxes",
   description: "Mon - Fri, 11:30am - 2:30pm",
   img: "lunchbox.jpg",
   rank: "6",
-  kname: ""
+  kname: "점심 도시락 메뉴"
   })
 Item.create([
   {
