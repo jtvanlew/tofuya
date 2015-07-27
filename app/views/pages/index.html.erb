@@ -275,34 +275,34 @@
 
 					<div class="col-sm-8 col-sm-offset-2">
 
-						<form id="contact-form" role="form" novalidate="">
+						<form id="contact-form" action="javascript:void(0);" role="form" novalidate="">
 
 							<div class="form-group">
 								<label class="sr-only" for="cname">Name</label>
-								<input type="text" id="cname" class="form-control" name="cname" placeholder="Name*" required="" data-validation-required-message="Please enter your name.">
+								<input type="text" id="cname" class="form-control" name="Name" placeholder="Name*" required="" data-validation-required-message="Please enter your name.">
 								<p class="help-block text-danger"></p>
 							</div>
 
 							<div class="form-group">
 								<label class="sr-only" for="cemail">Your Email</label>
-								<input type="email" id="cemail" name="cemail" class="form-control" placeholder="Your E-mail*" required="" data-validation-required-message="Please enter your email address.">
+								<input type="email" id="cemail" name="Email" class="form-control" placeholder="Your E-mail*" required="" data-validation-required-message="Please enter your email address.">
 								<p class="help-block text-danger"></p>
 							</div>
 
 							<div class="form-group">
-								<textarea class="form-control" id="cmessage" name="cmessage" rows="7" placeholder="Message*" required="" data-validation-required-message="Please enter your message."></textarea>
+								<textarea class="form-control" id="cmessage" name="Message" rows="7" placeholder="Message*" required="" data-validation-required-message="Please enter your message."></textarea>
 								<p class="help-block text-danger"></p>
 							</div>
 
+							<input type="text" name="_gotcha" style="display:none" />
+							<!-- <input type="hidden" name="_next" value="#" /> -->
+							<input type="hidden" name="_subject" value="Hello from Tofu Ya website">
+
 							<div class="text-center">
-								<button type="submit" class="btn btn-block btn-round btn-d">Submit</button>
+								<button type="submit" class="btn btn-block btn-round btn-d" value="Send">Submit</button>
 							</div>
 
 						</form>
-
-						<!-- Ajax response -->
-						<div id="contact-response" class="ajax-response font-alt"></div>
-
 					</div>
 
 				</div><!-- .row -->
