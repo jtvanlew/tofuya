@@ -182,6 +182,34 @@
 		<!-- Menu start -->
 		<section class="module">
 			<div class="container">
+				<% if ["Soon Tofu Stews", "Soon Tofu Combo Plates"].include? category.name %>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+						<div class="alt-module-subtitle">
+							<span class="holder-w"></span>
+							<h5 class="font-serif">Choose your spicy level</h5>
+							<span class="holder-w"></span>
+						</div>
+						<table style="width:100%" class="font-serif">
+						  <tr>
+						    <td style="width:20%" align="center">plain</td>
+						    <td style="width:20%" align="center">mild</td> 
+						    <td style="width:20%" align="center">medium</td>
+						    <td style="width:20%" align="center">spicy</td>
+						    <td style="width:20%" align="center">extra spicy</td>
+						  </tr>
+						  <tr>
+						    <td style="width:20%" align="center"><%= image_tag('pepper_o.png') %></td>
+						    <td style="width:20%" align="center"><%= image_tag('pepper.png') %></td> 
+						    <td style="width:20%" align="center"><%= image_tag('pepper.png') %><%= image_tag('pepper.png') %></td>
+						    <td style="width:20%" align="center"><%= image_tag('pepper.png') %><%= image_tag('pepper.png') %><%= image_tag('pepper.png') %></td>
+						    <td style="width:20%" align="center"><%= image_tag('pepper.png') %><%= image_tag('pepper.png') %><%= image_tag('pepper.png') %><%= image_tag('pepper.png') %></td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+				<% end %>
+				<hr>
 				<div class="row multi-columns-row">
 					<!-- Restaurant menu left col start -->
 					<div class="col-sm-6">
@@ -246,7 +274,7 @@
 		<!-- Menu end -->
 
 		<!-- Contact start -->
-		<section id="contact" class="module bg-dark">
+		<section id="contact" class="module-small bg-dark">
 			<div class="container">
 
 				<!-- Module header start -->
