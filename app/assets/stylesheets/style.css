@@ -11,6 +11,9 @@ Version: 1.5.1
 /* ------------------------------------------------------------------
 General Styles
 ------------------------------------------------------------------- */
+.navbar-fixed-top .navbar-collapse {
+  max-height: 700px;
+}
 
 .fa-wikipedia:before {
 	font-family: "Times New Roman", Times, serif; font-weight: 400;
@@ -901,7 +904,7 @@ Sections
 .module,
 .module-small {
 	position: relative;
-	padding: 140px 0;
+	padding: 80px 0;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	-webkit-background-size: cover;
