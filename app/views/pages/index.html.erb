@@ -64,37 +64,20 @@
 
 	<!-- Wrapper start -->
 	<div class="main">
-
-		<!-- Video start -->
-		<!--  -->
-		<!-- Video end -->
-
-		<!-- Popular menu start -->
-		<section id="menu" class="module">
+		<section id="menu" class="module bg-dark bg-dark-10" data-background="<%= asset_url('overview.jpg')%>">
 			<div class="container">
-
-				<!-- Module header start -->
 				<div class="row">
-
-					<div>
-						<div class="alt-module-subtitle">
-							<span class="holder-w"></span>
-							<h5 class="font-serif">Most popular orders</h5>
-							<span class="holder-w"></span>
-						</div>
+					<div class="col-sm-8 col-sm-offset-2 btn-dark">
+						<h2 class="module-title font-alt mb-0"><b>Popular Dishes</b></h2>
+						<h2 class="module-title font-alt mb-0"><b>인기 메뉴</b></h2>
 					</div>
-
-				</div><!-- .row -->
-
-				<div class="row">
-
-					<div class="col-sm-8 col-sm-offset-2">
-						<h2 class="module-title font-alt">Popular Dishes<br>인기 메뉴</h2>
-					</div>
-
-				</div><!-- .row -->
-				<!-- Module header end -->
-
+				</div>
+			</div>
+		</section>
+		<!-- Menu start -->
+		<section class="module">
+			<div class="container">
+				<hr>
 				<div class="row multi-columns-row">
 					<% items = Item.where(tag:"favorite").order(:menu_num.asc) %>
 					<!-- Restaurant menu left col start -->
@@ -159,12 +142,10 @@
 		<% items = category.items.order(:menu_num.asc) %>
 		<section id="<%= category.name.parameterize %>" class="module bg-dark bg-dark-10" data-background="<%= image_url(category.img)%>">
 			<div class="container">
-
-
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 btn-dark">
-						<h2 class="module-title font-alt mb-0 float-left"><b><%= category.name%></b></h2>
-						<h2 class="module-title font-alt mb-0 float-right"<b><%= category.kname%></b></h2>
+						<h2 class="module-title font-alt mb-0"><b><%= category.name%></b></h2>
+						<h2 class="module-title font-alt mb-0"><b><%= category.kname%></b></h2>
 					</div>
 				</div>
 				<div class="row">
