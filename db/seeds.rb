@@ -50,7 +50,7 @@ Item.create([
   tag: ["salad"],
   category: salad,
   menu_num: "36",
-  kname: ""
+  kname: "샐러드와 갈비"
   },
   {
   name: "Tofu With Salad",
@@ -58,7 +58,7 @@ Item.create([
   tag: ["salad","veggie"],
   category: salad,
   menu_num: "37",
-  kname: ""
+  kname: "샐러드와 두부"
   },
   {
   name: "Chicken Teriyaki With Salad",
@@ -66,7 +66,7 @@ Item.create([
   tag: ["salad"],
   category: salad,
   menu_num: "38",
-  kname: ""
+  kname: "샐러드와 닭 데리야끼"
   },
   {
   name: "Green Salad",
@@ -74,7 +74,7 @@ Item.create([
   tag: ["salad","veggie"],
   category: salad,
   menu_num: "39",
-  kname: ""
+  kname: "그린 샐러드"
   },
   {
   name: "Galbi",
@@ -101,7 +101,7 @@ Item.create([
   tag: ["bbq","spicy"],
   category: bbq,
   menu_num: "15",
-  kname: "돼지불고기"
+  kname: "돼지 불고기"
   },
   {
   name: "Chicken Bulgogi",
@@ -110,7 +110,7 @@ Item.create([
   tag: ["bbq","spicy"],
   category: bbq,
   menu_num: "16",
-  kname: "치킨불고기"
+  kname: "닭 불고기"
   },
   {
   name: "Chicken Katsu",
@@ -128,7 +128,7 @@ Item.create([
   tag: ["bbq"],
   category: bbq,
   menu_num: "19",
-  kname: "돼지까스"
+  kname: "돈까스"
   },
   {
   name: "Chicken Teriyaki",
@@ -137,7 +137,7 @@ Item.create([
   tag: ["bbq"],
   category: bbq,
   menu_num: "17",
-  kname: "치킨데리야끼"
+  kname: "닭 데리야끼"
   },
   {
   name: "Seafood",
@@ -146,7 +146,7 @@ Item.create([
   tag: ["tofu","favorite"],
   category: tofu,
   menu_num: "1",
-  kname: "순두부"
+  kname: "해산물 순두부 찌개"
   },
   {
   name: "Seafood & Beef",
@@ -155,7 +155,7 @@ Item.create([
   tag: ["tofu","favorite"],
   category: tofu,
   menu_num: "2",
-  kname: "순두부"
+  kname: "해산물 및 쇠고기 순두부 찌개"
   },
   {
   name: "Oyster",
@@ -164,7 +164,7 @@ Item.create([
   tag: ["tofu"],
   category: tofu,
   menu_num: "3",
-  kname: "굴순두부"
+  kname: "굴 순두부 찌개"
   },
   {
   name: "Mushroom",
@@ -173,7 +173,7 @@ Item.create([
   tag: ["tofu","favorite"],
   category: tofu,
   menu_num: "4",
-  kname: "버섯순두부"
+  kname: "버섯 순두부 찌개"
   },
   {
   name: "Pork",
@@ -182,7 +182,7 @@ Item.create([
   tag: ["tofu"],
   category: tofu,
   menu_num: "6",
-  kname: "돼지순두부"
+  kname: "돼지 순두부 찌개"
   },
   {
   name: "Clam",
@@ -191,7 +191,7 @@ Item.create([
   tag: ["tofu"],
   category: tofu,
   menu_num: "7",
-  kname: "순두부"
+  kname: "조개 순두부 찌개"
   },
   {
   name: "Beef",
@@ -200,7 +200,7 @@ Item.create([
   tag: ["tofu","favorite"],
   category: tofu,
   menu_num: "8",
-  kname: "쇠고기순두부"
+  kname: "소고기 순두부 찌개"
   },
   {
   name: "Dumpling",
@@ -209,7 +209,7 @@ Item.create([
   tag: ["tofu"],
   category: tofu,
   menu_num: "9",
-  kname: "순두부"
+  kname: "만두 순두부 찌개"
   },
   {
   name: "Denjang",
@@ -218,7 +218,7 @@ Item.create([
   tag: ["tofu"],
   category: tofu,
   menu_num: "10",
-  kname: "된장순두부"
+  kname: "된장 순두부 찌개"
   },
   {
   name: "Kimchi",
@@ -227,7 +227,7 @@ Item.create([
   tag: ["tofu"],
   category: tofu,
   menu_num: "5",
-  kname: "김치순두부"
+  kname: "김치 순두부 찌개"
   },
   {
   name: "Chicken",
@@ -236,7 +236,7 @@ Item.create([
   tag: ["tofu"],
   category: tofu,
   menu_num: "11",
-  kname: "순두부"
+  kname: "닭 순두부 찌개"
   },
   {
   name: "Vegetable",
@@ -245,7 +245,7 @@ Item.create([
   tag: ["tofu", "veggie","favorite"],
   category: tofu,
   menu_num: "12",
-  kname: "야채순두부"
+  kname: "야채 순두부 찌개"
   },
   {
   name: "Galbi & Soon Tofu",
@@ -254,7 +254,7 @@ Item.create([
   tag: ["combo","favorite"],
   category: tofu_combo,
   menu_num: "20",
-  kname: "갈비+순두부찌개"
+  kname: "갈비 + 순두부 찌개"
   },
   {
   name: "Bulgogi & Soon Tofu",
@@ -263,7 +263,7 @@ Item.create([
   tag: ["combo","favorite"],
   category: tofu_combo,
   menu_num: "21",
-  kname: "불고기+순두부찌개"
+  kname: "불고기 + 순두부 찌개"
   },
   {
   name: "Pork Bulgogi & Soon Tofu",
@@ -272,7 +272,7 @@ Item.create([
   tag: ["combo", "spicy"],
   category: tofu_combo,
   menu_num: "22",
-  kname: "돼지불고기+순두부찌개"
+  kname: "돼지 불고기 + 순두부 찌개"
   },
   {
   name: "Chicken Bulgogi & Soon Tofu",
@@ -281,7 +281,7 @@ Item.create([
   tag: ["combo","spicy"],
   category: tofu_combo,
   menu_num: "23",
-  kname: "치킨불고기+순두부찌개"
+  kname: "닭 불고기 + 순두부 찌개"
   },
   {
   name: "Chicken Teriyaki & Soon Tofu",
@@ -290,7 +290,7 @@ Item.create([
   tag: ["combo"],
   category: tofu_combo,
   menu_num: "24",
-  kname: "치킨데리야끼+순두부찌개"
+  kname: "닭 데리야끼 + 순두부 찌개"
   },
   {
   name: "Chicken Katsu & Soon Tofu",
@@ -299,7 +299,7 @@ Item.create([
   tag: ["combo","favorite"],
   category: tofu_combo,
   menu_num: "25",
-  kname: "치킨까스+순두부찌개"
+  kname: "치킨까스 + 순두부 찌개"
   },
   {
   name: "Pork Katsu & Soon Tofu",
@@ -308,7 +308,7 @@ Item.create([
   tag: ["combo"],
   category: tofu_combo,
   menu_num: "26",
-  kname: "돼지까스+순두부찌개"
+  kname: "돈까스 + 순두부 찌개"
   },
   {
   name: "Kimchi Dolsot Bibimbap & Soon Tofu",
@@ -317,7 +317,7 @@ Item.create([
   tag: ["combo"],
   category: tofu_combo,
   menu_num: "27",
-  kname: "김치돌솥비빔밥+순두부찌개"
+  kname: "김치 돌솥 비빔밥 + 순두부 찌개"
   },
   {
   name: "Dolsot Bibimbap & Soon Tofu",
@@ -326,7 +326,7 @@ Item.create([
   tag: ["combo"],
   category: tofu_combo,
   menu_num: "28",
-  kname: "돌솥비빔밥+순두부찌개"
+  kname: "돌솥 비빔밥 + 순두부 찌개"
   },
   {
   name: "Bibimbap & Soon Tofu",
@@ -335,7 +335,7 @@ Item.create([
   tag: ["combo"],
   category: tofu_combo,
   menu_num: "29",
-  kname: "비빔밥+순두부찌개"
+  kname: "비빔밥 + 순두부 찌개"
   },
   {
   name: "Udon & California Roll",
@@ -344,7 +344,7 @@ Item.create([
   tag: ["combo"],
   category: tofu_combo,
   menu_num: "30",
-  kname: "우동+캘리포니아롤"
+  kname: "우동 + 캘리포니아 롤"
   },
   {
   name: "Dolsot Bibimbap",
@@ -353,7 +353,7 @@ Item.create([
   tag: ["special"],
   category: special,
   menu_num: "31",
-  kname: "돌솥비빔밥"
+  kname: "돌솥 비빔밥"
   },
   {
   name: "Bibimbap",
@@ -380,7 +380,7 @@ Item.create([
   tag: ["special"],
   category: special,
   menu_num: "35",
-  kname: "캘리포니아롤"
+  kname: "캘리포니아 롤"
   },
   {
   name: "Kimchi Dolsot Bibimbap",
@@ -389,7 +389,7 @@ Item.create([
   tag: ["special"],
   category: special,
   menu_num: "32",
-  kname: "김치돌솥비빔밥"
+  kname: "김치 돌솥 비빔밥"
   },
   {
   name: "Lunch Box",
@@ -398,6 +398,6 @@ Item.create([
   tag: ["lunch box"],
   category: box,
   menu_num: "40",
-  kname: ""
+  kname: "도시락"
   }
 ])
