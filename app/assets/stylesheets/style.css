@@ -13,6 +13,11 @@ General Styles
 ------------------------------------------------------------------- */
 
 /* our custom crap **************************************/
+.doordash {
+	height: 11px;
+	vertical-align: initial;
+}
+
 .spice-level {
 	position: absolute;
 	top: 40px;
