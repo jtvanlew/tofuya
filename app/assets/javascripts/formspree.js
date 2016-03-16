@@ -5,6 +5,7 @@
     var $contactForm = $('#contact-form');
     $contactForm.validate();
     $contactForm.submit(function(e) {
+      debugger;
         if ($(this).valid())
              {
                e.preventDefault();
